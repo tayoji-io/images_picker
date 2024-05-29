@@ -47,6 +47,7 @@ public class Utils {
     public static PictureSelectionCameraModel setPhotoSelectOpt(PictureSelectionCameraModel model, int count, double quality) {
         model
                 .setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                .setCompressEngine(new ImageFileCompressEngine())
                 .setCameraImageFormat(PictureMimeType.JPEG)
                 .setCameraVideoFormat(PictureMimeType.MP4);
         return model;
