@@ -123,7 +123,7 @@ public class Utils {
 
         @Override
         public void onStartCompress(Context context, ArrayList<Uri> source, final OnKeyValueResultCallbackListener call) {
-            Luban.with(context).load(source).ignoreBy(100).setRenameListener(new OnRenameListener() {
+            Luban.with(context).load(source).ignoreBy(200).setRenameListener(new OnRenameListener() {
                 @Override
                 public String rename(String filePath) {
                     int indexOf = filePath.lastIndexOf(".");
