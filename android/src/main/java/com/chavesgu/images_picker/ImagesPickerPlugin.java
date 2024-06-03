@@ -225,7 +225,7 @@ public class ImagesPickerPlugin implements FlutterPlugin, MethodCallHandler, Act
             final List<Object> resArr = new ArrayList<Object>();
             for (LocalMedia media:medias) {
               HashMap<String, Object> map = new HashMap<String, Object>();
-              String path = media.getPath();
+              String path = media.getRealPath();
               if (media.getMimeType().contains("image")) {
                 if (media.isCut()) path = media.getCutPath();
                 if (media.isCompressed()) path = media.getCompressPath();
